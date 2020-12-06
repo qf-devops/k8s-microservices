@@ -3,7 +3,7 @@ node(){
     checkout scm
   }
   stage("kubectl"){
-  sh "kubectl create -f "
+  sh "kubectl apply -f db-pod.yaml -f db-service.yaml "
   }
 
 }
