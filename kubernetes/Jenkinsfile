@@ -1,0 +1,9 @@
+node(){
+  stage("prep"){
+    checkout scm
+  }
+  stage("kubectl"){
+  
+  }
+
+}
