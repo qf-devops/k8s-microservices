@@ -3,20 +3,15 @@ kind: Pod
 metadata:
   name: db
   labels:
-    name: mongo
+    name: redis
     app: todoapp
+  namespace: dev  
 spec:
       containers:
-      - image: mongo
-        name: mongo
+      - image: redis
+        name: redis
         ports:
-        - name: mongo
-          containerPort: 27017
-        volumeMounts:
-          - name: mongo-storage
-            mountPath: /data/db
-      volumes:
-          - name: mongo-storage
-            hostPath:
-              path: /data/db
+        - name: redis
+          containerPort: 6379
+        
               
