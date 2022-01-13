@@ -5,12 +5,13 @@ metadata:
   labels:
     name: web
     app: todoapp
+  namespace: dev
 spec:
   selector:
     name: web 
   type: NodePort
   ports:
    - name: http
-     port: 3000
-     targetPort: 3000
+     port: 5000
+     targetPort: 5000
      protocol: TCP
