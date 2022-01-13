@@ -3,13 +3,14 @@ kind: Service
 metadata:
   name: db
   labels:
-    name: mongo
+    name: redis
     app: todoapp
+  namespace: dev  
 spec:
   selector:
-    name: mongo
+    name: redis
   type: ClusterIP
   ports:
     - name: db
-      port: 27017
-      targetPort: 27017
+      port: 6379
+      targetPort: 6379
